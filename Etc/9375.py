@@ -20,14 +20,11 @@ for _ in range(T):
             clothes_dict[category] = 1
 
     # 조합 따라서 개수 구하기
+    result = 1
     name_list = list(clothes_dict.values())
-    name_count = len(name_list)
-    for num in range(1, name_count + 1):
-        for elems in combinations(name_list, num):
-            temp = 1
-            for elem in elems:
-                temp *= elem
-            result += temp
+    for elem in name_list:
+        result *= (elem + 1)
+    result -= 1
     result_for_print.append(result)
 
 for i in result_for_print:
