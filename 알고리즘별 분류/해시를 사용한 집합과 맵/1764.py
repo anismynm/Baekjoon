@@ -13,5 +13,6 @@ for _ in range(M):
 result = sorted(set(hear) & set(seen))
 
 print(len(result))
+
 for person in result:
     print(person)
