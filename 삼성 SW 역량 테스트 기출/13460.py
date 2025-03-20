@@ -1,4 +1,4 @@
-## 2024.03.20
+## 2025.03.20
 ## 3H 24M
 from collections import deque
 N, M = map(int, input().split()) # 세로, 가로
