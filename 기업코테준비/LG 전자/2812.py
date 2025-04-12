@@ -1,25 +1,15 @@
-import sys
-input = sys.stdin.readline
-
 N, K = map(int, input().split())
-num = list(int(d) for d in input().rstrip())
+nums = list(int(d) for d in input())
+result = []
 
-pivot = max(num[:K + 1])
-K -= num.index(pivot)
-num = num[num.index(pivot):]
-
-i = 0
-while K and i < len(num) - 1:
-    if num[i] < num[i + 1]:
-        num.pop(i)
+for num in nums:
+    while result and K > 0 and result[-1] < num:
+        result.pop()
         K -= 1
-        i -= 1
-    else:
-        i += 1
+    result.append(num)
 
-if K:
-    num = num[:len(num) - K]
+while K > 0:
+    result.pop()
+    K -= 1
 
-for i in num:
-    print(i, end = '')
-print()
+print(''.join(map(str, result)))
