@@ -37,3 +37,5 @@ def combinations_with_replacement(n, new_arr, c):
         return
     for i in range(c, len(arr)):
         combinations_with_replacement(n, new_arr + [arr[i]], i)
+
+combinations(3, [], 0)

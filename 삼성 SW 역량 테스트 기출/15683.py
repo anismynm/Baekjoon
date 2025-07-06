@@ -1,5 +1,6 @@
 ## 2025.03.24
 ## 2H 21M
+## deepcopy 대신 BackTracking으로 True, False !!!
 
 import copy
 import sys
